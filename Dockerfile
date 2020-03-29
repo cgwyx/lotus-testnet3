@@ -6,8 +6,8 @@ RUN pacman -Syu --noconfirm opencl-icd-loader &&\
 RUN git clone -b testnet/3 https://github.com/filecoin-project/lotus.git &&\
     cd lotus &&\
     make clean all &&\
-    make install
-    
+    make install &&\
+    make build bench
 
 VOLUME ["/home","/root","/var"]
 
